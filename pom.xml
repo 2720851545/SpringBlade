@@ -9,6 +9,9 @@
     <packaging>pom</packaging>
 
     <properties>
+        <sonar.organization>2720851545</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
         <blade.tool.version>3.1.0</blade.tool.version>
         <blade.project.version>3.1.0</blade.project.version>
 
