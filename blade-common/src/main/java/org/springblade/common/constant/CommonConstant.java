@@ -1,5 +1,7 @@
 package org.springblade.common.constant;
 
+import org.springblade.core.launch.constant.AppConstant;
+
 /**
  * 通用常量
  *
@@ -33,4 +35,8 @@ public interface CommonConstant {
 	 */
 	String DEFAULT_PASSWORD = "123456";
 
+	/**
+	 * 广告模块名称
+	 */
+	String APPLICATION_AD_NAME = AppConstant.APPLICATION_NAME_PREFIX + "ad";
 }

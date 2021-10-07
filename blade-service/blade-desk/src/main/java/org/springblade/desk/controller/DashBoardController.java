@@ -3,6 +3,8 @@ package org.springblade.desk.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
+import org.springblade.ad.entity.Blog;
+import org.springblade.ad.feign.BlogClient;
 import org.springblade.core.tool.api.R;
 import org.springblade.core.tool.support.Kv;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +26,8 @@ import java.util.Map;
 @AllArgsConstructor
 @Api(value = "首页", tags = "首页")
 public class DashBoardController {
+
+	private BlogClient blogClient;
 
 	/**
 	 * 活跃用户
@@ -55,4 +59,10 @@ public class DashBoardController {
 
 		return R.data(list);
 	}
+
+	@GetMapping("blog-detail")
+	public R<Blog> blogDetail(Integer id) {
+		return blogClient.detail(id);
+	}
+
 }
